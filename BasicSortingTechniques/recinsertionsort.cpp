@@ -1,54 +1,36 @@
 #include<iostream>
 using namespace std;
-void merge(int arr[],int low,int mid,int high)
+void recinsertion(int arr[],int n,int i)
 {
-         
-          int arr1[high+1];
-          int i=low,j=mid+1,k=low;
-          while(i<=mid&&j<=high)
-          {
-             if(arr[i]<arr[j])
-                 arr1[k++]=arr[i++];
-            else
-                arr1[k++]=arr[j++];
-            }
-          while(i<=mid)
-          {
-            arr1[k++]=arr[i++];
-          }
-          while(j<=high)
-          {
-                  arr1[k++]=arr[j++];
-          }
-          for(int i=low;i<=high;i++)
-          {
-                  arr[i]=arr1[i];
-          }
-          
-
-}
-void mergesort(int arr[],int low,int high)
-{
-      if(low<high)
-        {
-            int mid=low+(high-low)/2;
-            mergesort(arr,low,mid);
-            mergesort(arr,mid+1,high);
-            merge(arr,low,mid,high);
-        }
+      if(i==n) return;
+           
+           int pivot=arr[i]; 
+           int j=i-1;
+           while(j>=0&&arr[j]>pivot)
+           {
+               arr[j+1]=arr[j];
+               j--;
+              
+           }
+           arr[j+1]=pivot;
+     recinsertion(arr,n,++i);
 }
 int main()
 {
     int n;
-    cout<<"Enter size of array : ";
+    cout<<"Enter size of array :";
     cin>>n;
-    int arr[n];
+    int *arr=new int[n];
     for(int i=0;i<n;i++)
-      cin>>arr[i];
-    cout<<"order of elements after merge sort :";
-     mergesort(arr,0,n-1);
+    {
+         cin>>arr[i];
+    }
+    recinsertion(arr,n,0);
+    cout<<"Elements after insertion sort :"<<endl;
     for(int i=0;i<n;i++)
     {
         cout<<arr[i]<<" ";
     }
+    delete[]arr;
+    return 0;
 }
