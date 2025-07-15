@@ -1,0 +1,1 @@
+ len=max(len,j-i+1);
