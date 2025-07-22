@@ -16,11 +16,17 @@ I’m solving problems daily in **C++**, following [Striver’s A2Z DSA Sheet](h
 ---
 
 ## 📁 Current Folder Structure
+
 📁 Arrays/
+
 📁 BasicHashing/
+
 📁 BasicMathsConcept/
+
 📁 BasicRecursion/
+
 📁 BasicSortingTechniques/
+
 📁 RecursionProblems/
 
 ---
@@ -37,7 +43,7 @@ I’m solving problems daily in **C++**, following [Striver’s A2Z DSA Sheet](h
 | Recursion Problems     | In Progress | Advanced + backtracking      |
 
 
-> ⏳ More topics will be added as I progress further through the sheet.
+> More topics will be added as I progress further through the sheet.
 
 ---
 
