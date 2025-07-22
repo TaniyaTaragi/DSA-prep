@@ -50,27 +50,39 @@ I’m solving problems daily in **C++**, following [Striver’s A2Z DSA Sheet](h
 ## 📥 How to Use
 
 git clone https://github.com/TaniyaTaragi/<DSA-prep>
-cd <DSA-prep>
+
 
 --Navigate to any folder to explore topic-wise problems.
+
 --Code is clean, logically structured, and includes comments.
+
 --Ideal for interview prep & revision.
 
 👩‍💻 About Me
 
 I’m Taniya Taragi, a tech enthusiast building projects and sharpening problem-solving skills daily.
 
+---
+
 📍 Developer | DSA Learner | Open Source Explorer
+
+---
 
 🔗 GitHub: [@TaniyaTaragi](https://github.com/TaniyaTaragi)
 
+---
+
 ⭐ Contributions & Feedback
+
 If you'd like to suggest improvements, fix bugs, or contribute more problems, feel free to:
+
 -Raise an issue
+
 -Submit a pull request
 
 Or just ⭐️ this repo to support the journey!
 
 “Consistency creates mastery. One problem at a time.” 💪
+
 Stay tuned! 🚀
 
