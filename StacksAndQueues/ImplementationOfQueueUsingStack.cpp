@@ -1,89 +1,60 @@
 #include<iostream>
+#include<stack>
 using namespace std;
 
-class queuee {
-    int queue[10];
-    int front;
-    int rear;
-
+class MyQueue {
+    stack<int>st;
+    stack<int>stt;
 public:
-    queuee() {
-        front = -1;
-        rear = -1;
+   
+    MyQueue() {
+        
     }
+    
+    void push(int x) {
+       
+       while(!st.empty())
+        {
+             int val=st.top();
+             stt.push(val);
+             st.pop();
+        }
+        st.push(x);
+       while(!stt.empty())
+       {
+            st.push(stt.top());
+            stt.pop();
+       }
+        while (!stt.empty()) 
+          stt.pop();
+       
 
-    void push(int item) {
-        if (rear == 9) {
-            cout << "stack is full " << endl;
-            return;
-        }
-        else if (front == -1) {
-            front = rear = 0;
-            queue[rear] = item;
-        }
-        else {
-            rear++;
-            queue[rear] = item;
-            int val = queue[rear];
-            for (int i = rear - 1; i >= front; i--) {
-                queue[i + 1] = queue[i];
-            }
-            queue[front] = val;
-        }
-        cout << "element inserted!!!" << endl;
     }
-
-    void pop() {
-        if (front == -1 || front > rear) {
-            cout << "stack is empty " << endl;
-            return;
-        }
-        front++;
-        cout << "element removed!!!" << endl;
-
-        if (front > rear) { // Reset when stack becomes empty
-            front = rear = -1;
-        }
+    
+    int pop() {
+        int temp=st.top();
+        st.pop();
+        return temp;
     }
-
-    void size() {
-        if (front == -1 || front > rear) {
-            cout << "Size is 0" << endl;
-            return;
-        }
-        cout << "size is : " << (rear - front + 1) << endl;
+    
+    int peek() {
+        int temp=st.top();
+        return temp;
     }
-
-    void top() {
-        if (front == -1 || front > rear) {
-            cout << "stack is empty " << endl;
-            return;
-        }
-        cout << "top element is : " << queue[front] << endl;
-    }
-
-    void display() {
-        if (front == -1 || front > rear) {
-            cout << "stack is empty " << endl;
-            return;
-        }
-        for (int i = front; i <= rear; i++) {
-            cout << queue[i] << endl;
-        }
+    
+    bool empty() {
+        if(st.empty())
+           return true;
+        else
+          return false;
     }
 };
 
-int main() {
-    queuee obj;
-    obj.push(10);
-    obj.push(1);
-    obj.push(8);
-    obj.pop();
-    obj.push(6);
-    obj.pop();
-    obj.pop();
-    obj.top();
-    obj.size();
-    obj.push(2);
-    obj.display();
-}
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue* obj = new MyQueue();
+ * obj->push(x);
+ * int param_2 = obj->pop();
+ * int param_3 = obj->peek();
+ * bool param_4 = obj->empty();
+ */
