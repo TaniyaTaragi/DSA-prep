@@ -12,3 +12,6 @@ Arrays/MediumArrayProblems/PrintMatrixInSpiralOrder.exe
 Arrays/MediumArrayProblems/RotateMatrixBy90.exe
 Arrays/MediumArrayProblems/SetMatrixZero.exe
 Arrays/MediumArrayProblems/SubarrraySumEqualsK.exe
+RecursionProblems/CountAllSubsequencesWithSumK.cpp
+StacksAndQueues/ImplementationOfStackUsingArrays.exe
+StacksAndQueues/ImplementationOfStackUsingClass.exe

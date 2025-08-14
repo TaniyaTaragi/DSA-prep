@@ -1,5 +1,7 @@
-class Solution {
-public:
+#include<iostream>
+using namespace std;
+#include<vector>
+#include<algorithm>
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
         
         vector<vector<int>>res;
@@ -41,4 +43,3 @@ public:
         }
     return res;
     }
-};
