@@ -12,9 +12,8 @@ int precedence(char s)
             
         return 0;
 }
-bool isRightAssociative(char op) {
-    return (op == '^'); 
-}
+
+
 int main()
 {
     string s="a*b+c*d";
@@ -38,7 +37,7 @@ int main()
        else { 
             while(!st.empty() && st.top()!='(' &&
                   (precedence(st.top()) > precedence(s[i]) ||
-                  (precedence(st.top()) == precedence(s[i]) && !isRightAssociative(s[i])))) {
+                  (precedence(st.top()) == precedence(s[i]) ))) {
                 cout << st.top();
                 st.pop();
             }
